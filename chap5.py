@@ -152,19 +152,33 @@ while文
 # print(fmt.format(point))
 
 # 無限ループから抜ける
+# from random import randint
+# count = 0
+# while True :
+#     a = randint(1,13)
+#     b = randint(1,13)
+#     c = randint(1,13)
+#     count += 1
+#     print(a,b,c)
+#     if (a+b+c) ==21:
+#         break
+# print(f"できたよ！値は{a},{b},{c}だったよ。{count}回もかかっちゃった")
+
+# 3階間違えるか、qと入力されるまで出題を繰り返す
+# f
+
+"""
+continue
+"""
+# 重複しない値が１０個入ったリストを作る
 from random import randint
-count = 0
-while True :
-    a = randint(1,13)
-    b = randint(1,13)
-    c = randint(1,13)
-    count += 1
-    print(a,b,c)
-    if (a+b+c) ==21:
-        break
-print(f"できたよ！値は{a},{b},{c}だったよ。{count}回もかかっちゃった")
+numbers = []
+while len(numbers)<10:
+    n = randint(0,100)
+    print("{}が出ました！".format(n))
+    if n in numbers :
+        continue  #すでに含まれている値は追加せずに処理をスキップして次の値にいく
+    numbers.append(n)
+    print(numbers)
 
-
-
-
-
+print("最終的にこれっす",numbers)
