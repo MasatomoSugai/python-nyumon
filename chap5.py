@@ -360,4 +360,26 @@ else:
 finally:
   try文を抜ける前に必ず実行する処理
   
+
+except 例外1 as 名前１
+  として、例外をその名前の変数に一時的に保管できる
 """
+
+sum = 7600
+while True :
+    num = input("何人ですか？(qで終了)")
+    if num == "q":
+        print("終了しました。")
+        break
+    try :
+        price = round(sum / int(num))
+    except Exception as error :
+        print("エラーになりました。")
+        print(error) #エラー情報を出力
+    else :
+        if price < 0 :
+            continue
+        print("一人当たりの金額", price)
+
+# Exceptionクラスを継承しているので、一般的な実行エラーは except Exception:で全ての例外を処理できる
+
