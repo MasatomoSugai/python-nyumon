@@ -149,9 +149,56 @@ remove()・・・削除したい特定の値がわかっている時に使用。
 # print("削除後",colors)
 
 # 削除したい値をリストから全て削除するパターン
-colors = ["green","blue", "red", "green", "yellow","green"]
-print("削除前", colors)
-target = "green"
-while target in colors : #削除する値が含まれている間は繰り返し削除する
-    colors.remove(target)
-print("削除後", colors)
+# colors = ["green","blue", "red", "green", "yellow","green"]
+# print("削除前", colors)
+# target = "green"
+# while target in colors : #削除する値が含まれている間は繰り返し削除する
+#     colors.remove(target)
+# print("削除後", colors)
+
+# delを使った削除 リストの位置を指定して削除することが可能
+# data = ["a", "b", "c", "d"]
+# del data[1]
+# print(data)
+# del data[0]
+# print(data)
+# del data  #リストそのものを削除
+# print(data)
+
+"""
+文字列とリストの相互変換
+
+文字列.split(セパレータ)・・・文字列をセパレータで分割してリストにする
+"""
+# 空白で区切られた単語をリストにする
+# message = "may the force be with you"
+# words = message.split()
+# print(words)
+
+# # カンマで区切られた単語をリストにする
+# fruits = "apple,orange,banana,mango" 
+# words = message.split(",")
+# print(fruits)
+# カンマと空白で区切られた単語をリストにする
+# fruits = "apple, orange, banana, mango" 
+# words = message.split(", ")
+# print(fruits)
+# カンマの前後の空白が１個とは限らない場合は事前に取り除いてから分割
+# colors = "red,blue,  green, white , black"
+# colors = colors.replace(" ", "") #空白を取り除く
+# print(colors)
+# color_list = colors.split(",")
+# print(color_list)
+
+"""
+最大分割回数を指定する
+
+"""
+
+# 最愛分割回数を３にしてリストに分割する
+result = "12,13,43,56,778,43,54,55,66"
+result_list = result.split(",", 3)
+print(result_list)
+# 先頭から3要素をスライス
+top3 = result.split(",", 3)[:3]
+print(top3)
