@@ -196,9 +196,62 @@ remove()・・・削除したい特定の値がわかっている時に使用。
 """
 
 # 最愛分割回数を３にしてリストに分割する
-result = "12,13,43,56,778,43,54,55,66"
-result_list = result.split(",", 3)
-print(result_list)
-# 先頭から3要素をスライス
-top3 = result.split(",", 3)[:3]
-print(top3)
+# result = "12,13,43,56,778,43,54,55,66"
+# result_list = result.split(",", 3)
+# print(result_list)
+# 先頭から3要素をスライスしてリストを作る
+# top3 = result.split(",", 3)[:3]
+# print(top3)
+
+"""
+リスト要素を連結して文字列を作る
+セパレータ.join(リスト)
+"""
+
+# members = ["Tom", "jerry", "Spike"]
+# name = " and ".join(members) #andの前後にスペースがあった方がいい
+# print(name)
+
+
+"""
+section 6-2
+リストの連結、スライス、複製、比較
+
+"""
+
+"""
+リストを連結する
+"""
+# + や +=演算子を使うと簡単
+
+# abc = ["a", "b", "c"]
+# xyz = ["x", "y", "z"]
+# abcxyz = abc + xyz
+# print(abcxyz)
+
+# colors = []
+# colors += ["red"]
+# colors += ["white"]
+# print(colors)
+
+# extend()で連結
+# data = [1,3,2]
+# newdata = [4,5,5]
+# data.extend(newdata)
+# print(data) #==> [1,3,2,4,5,5]
+
+# append()で追加するとリストを１個の要素として追加
+# data = [1,3,2]
+# newdata = [4,5,5]
+# data.append(newdata)
+# print(data) #==>[1,3,2,[4,5,5]]
+
+"""
+リストをスライス
+
+リスト[開始位置:終了位置]
+"""
+
+colors = ["blue", "red", "green", "yellow", "pink", "black", "white"]
+print(colors[:]) #全部
+print(colors[3:]) #3から最後まで
